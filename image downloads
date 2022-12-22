@@ -1,0 +1,22 @@
+<input type="file" id="myFileInput" />
+<img id="myImage" />
+<img id="preview image"/>
+<value="uploads">
+
+<script>
+  var inputElement = document.getElementById("myFileInput");
+  inputElement.addEventListener("change", handleFiles, false);
+
+  function handleFiles() {
+    var file = this.files[0];
+
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var img = document.getElementById("myImage");
+document.getElementById("preview image");   
+  document.getElementById("image expand");       
+      img.src = e.target.result;
+    }
+    reader.readAsDataURL(file);
+  }
+</script>
